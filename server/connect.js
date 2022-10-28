@@ -1,7 +1,8 @@
 const { MongoClient } = require('mongodb');
 
-const url =
-  'mongodb+srv://loganthehut:qG8zr9NddeQaVojs@recipecluster.wdgctf5.mongodb.net/?retryWrites=true&w=majority';
+require('dotenv').config();
+
+const url = process.env.REACT_APP_MONGO_AUTH;
 
 const client = new MongoClient(url);
 
